@@ -1,0 +1,107 @@
+
+<html lang="en">
+<head>
+ 
+  <title>Cricket game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Bat Ball Stump GAME
+  </h1>
+ 
+  <button onclick="
+  //This will genratte random number between 0 nad 3
+  randomNumber=Math.random()*3;
+  computerChoice;
+  if( randomNumber<=1){
+    computerChoice='Bat';
+    
+
+  }else if( randomNumber<=2){
+    computerChoice='Ball';
+    
+  }else {
+    computerChoice='Stump';
+    
+  }
+  
+  if(computerChoice==='Bat'){
+    resultMsg=`It's a tie`;
+
+  }else if(computerChoice==='Ball'){
+    resultMsg=`User won`;
+  }else if(computerChoice==='Stump'){
+    resultMsg=`Computer won`;
+  }
+   alert(`YOU HAVE CHOSEN BAT. COMPUTER's CHOICE IS ${computerChoice} AND ${resultMsg}`);
+  
+  "
+  >Bat</button>
+
+  <button onclick="
+  //This will genratte random number between 0 nad 3
+  randomNumber=Math.random()*3;
+  computerChoice;
+  if( randomNumber<=1){
+    computerChoice='Bat';
+    
+
+  }else if( randomNumber<=2){
+    computerChoice='Ball';
+    
+  }else {
+    computerChoice='Stump';
+    
+  }
+   resultMsg;
+  if(computerChoice==='Bat'){
+    resultMsg=`computer won`;
+
+  }else if(computerChoice==='Ball'){
+    resultMsg=`It's a tie`;
+  }else if(computerChoice==='Stump'){
+    resultMsg=`USER won`;
+  }
+   alert(`YOU HAVE CHOSEN BALL. COMPUTER's CHOICE IS ${computerChoice} AND ${resultMsg}`); "
+  >Ball</button>
+
+  <button onclick="
+  //This will genratte random number between 0 nad 3
+  randomNumber=Math.random()*3;
+  computerChoice;
+  if( randomNumber<=1){
+    computerChoice='Bat';
+    
+
+  }else if( randomNumber<=2){
+    computerChoice='Ball';
+    
+  }else {
+    computerChoice='Stump';
+    
+  }
+   resultMsg;
+  if(computerChoice==='Bat'){
+    resultMsg=`user won`;
+
+  }else if(computerChoice==='Ball'){
+    resultMsg=`computer won`;
+  }else if(computerChoice==='Stump'){
+    resultMsg=`It's a tie`;
+  }
+   alert(`YOU HAVE CHOSEN STUMP. COMPUTER's CHOICE IS ${computerChoice} AND ${resultMsg}`); "
+  >Stump</button>
+  <script>
+     let randomNumber=Math.random()*3;
+     let computerChoice;
+     let resultMsg;
+  </script>
+
+
+</body>
+</html>

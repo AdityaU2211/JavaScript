@@ -1,0 +1,126 @@
+
+<html lang="en">
+<head>
+  <title>Cricket game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Bat Ball Stump GAME
+  </h1>
+ 
+  <button onclick="
+  let computerChoice=genarteComputerChoice();
+  resultMsg=getResult('BAT',computerChoice)
+  showResult('BAT',computerChoice,resultMsg);
+  "
+  >BAT</button>
+
+  <button onclick="
+ computerChoice=genarteComputerChoice();
+ resultMsg=getResult('BALL',computerChoice)  
+ showResult('BALL',computerChoice,resultMsg)
+ "
+>BALL</button>
+
+  <button onclick="
+  computerChoice=genarteComputerChoice();
+  resultMsg=getResult('STUMP',computerChoice)  
+  showResult('STUMP',computerChoice,resultMsg)
+  "
+  >STUMP</button>
+
+
+  <script>
+    let score={
+      win:0,
+      lost:0,
+      tie:0,
+      dispalyScore:function(){
+        return     ` Won:${score.win},Lost:${score.lost},Tie:${score.tie}`
+
+      }
+    }
+
+     let randomNumber=Math.random()*3;
+     let resultMsg;
+
+     function genarteComputerChoice () {
+        randomNumber=Math.random()*3;
+        
+        if( randomNumber<=1){
+         return'BAT';
+    
+
+        }else if( randomNumber<=2){
+           return'BALL';
+    
+        }else {
+        return'STUMP';
+       }
+     }
+
+     function getResult(userMove,computerMove,computerChoice){
+      if (userMove==='BAT'){
+        if(computerMove==='BALL'){
+          score.win++;
+          return `user won`
+          
+        }else if(computerChoice==='BAT'){
+          score.tie++;
+          return `It's a tie`
+          
+        }else{
+          score.lost++;
+          return `computer won`;
+          
+        }
+      }else if(userMove==='BALL'){
+        if(computerMove==='BALL'){
+          score.tie++;
+          return `It's a tie`
+          
+        }else if(computerChoice==='BAT'){
+          score.lost++;
+          return `computer won`
+          
+        }else{
+          score.win++;
+          return `User won`
+          
+        }
+
+      }else{
+        if(computerMove==='BALL'){
+          score.lost++;
+          return `Computer won`
+          
+
+        }else if(computerChoice==='BAT'){
+          score.win++;
+          return `User won`
+          
+        }else{
+          score.tie++;
+          return `It'a tie`
+        }
+
+      }
+     }
+     
+     function showResult(userMove,computerChoice,resultMsg){
+      alert(`You Have Chosen ${userMove}. Computer's Choice Is ${computerChoice} 
+      
+      ${resultMsg}
+       
+      ${score.dispalyScore()}
+`);
+     }
+     
+  </script>
+</body>
+</html>
